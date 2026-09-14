@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>29 Online Multiplayer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header><h1>🃏 29 Online</h1><p>4 Player Multiplayer Card Game</p></header>
+  <section id="lobby" class="panel">
+    <input id="name" maxlength="20" placeholder="তোমার নাম">
+    <button id="create">Create Room</button>
+    <div class="join"><input id="room" maxlength="5" placeholder="ROOM CODE"><button id="join">Join Room</button></div>
+    <p id="msg"></p>
+  </section>
+
+  <section id="roomView" class="panel hidden">
+    <h2>Room: <span id="roomCode"></span></h2>
+    <div id="players" class="players"></div>
+    <button id="start">Start Game</button>
+    <p id="roomMsg">৪ জন হলে Start চাপুন।</p>
+  </section>
+
+  <section id="game" class="hidden">
+    <div class="gameTop"><b id="turn"></b><span id="seat"></span></div>
+    <div id="table" class="table"></div>
+    <h3>Your Cards</h3>
+    <div id="hand" class="hand"></div>
+  </section>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
